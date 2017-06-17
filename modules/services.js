@@ -21,7 +21,7 @@ const defs = [
   },
   {
     member: 'tuamae',
-    regex: /bot.*(puto|porra|noiado|merda|retardado|lento|doente|doido|maluco|louco|corinthiano|arrombado|gordo|nazista|gay|burro|idiota|retardado|trou?xa|maconheiro|inútil|fiduma(e|é)gua|z(e|é) r(u|o)ela|ot(á|a)rio|v(i|e)ado)|filh(o|a) da puta/i,
+    regex: /bot.*(puto|fdp|porra|noiado|merda|retardado|lento|doente|doido|maluco|louco|corinthiano|arrombado|gordo|nazista|ptista|gay|burro|idiota|retardado|trou?xa|maconheiro|inútil|fiduma(e|é)gua|z(e|é) r(u|o)ela|ot(á|a)rio|v(i|e)ado)|filh(o|a) da puta/i,
     fn: (bot, msg, match) => tuamae.execute(bot, msg, match ? match : []),
     eval: false
   },
