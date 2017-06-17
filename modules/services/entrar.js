@@ -3,7 +3,7 @@
 const answers = [
   'Mais um viado nessa porra!',
   'Já manda uns pornô aí seu arrombado de merda!',
-  'Mais punheteiro derrotado!',
+  'Mais um punheteiro derrotado!',
   'Opa. Mais um desajustado social entrou no grupo!',
   'Um doente mental acabou de entrar.',
   'Já vou avisando, entrou tem que mandar um pack de pornô!',
@@ -21,7 +21,7 @@ const execute = (bot, msg) => {
     0: bot.sendMessage(msg.chat.id, answers[Math.floor(Math.random() * answers.length)]),
     1: bot.sendSticker(msg.chat.id, stickers[Math.floor(Math.random() * stickers.length)])
   }
-  
+
   if(msg.new_chat_member.id === 448767583) {
     bot.sendMessage(msg.chat.id, 'Cheguei nessa porra seus putos. Bora zuar!!!!').catch(console.log)
   }else {
