@@ -1,5 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api')
-const TOKEN = '439327437:AAH6PUDk8wqNEkTOCW9eBuy24zuE5ESoP8w'
+const TOKEN = '448767583:AAG4OALl2BQta0FUHt2cxJQ4S2xY-BKhN10'
 const commands = require('./modules/commands.js')
 const services = require('./modules/services.js')
 const _services = services.defs
@@ -19,7 +19,8 @@ bot.onText(/^\/([a-zA-Z]+) ?([^@]+)?(@.*bot)?/i, (msg, match) => {
 bot.onText(/^([^\/]+)/i, (msg, match) => {
   _services.forEach((element, index) => {
     if(_services[index].regex.test(msg.text)) {
-      _services[index].fn(bot, msg)
+      let _match = msg.text.match(_services[index].regex)
+      _services[index].fn(bot, msg, _match)
     }
   })
 })
@@ -42,6 +43,10 @@ bot.on('callback_query', callback => {
 //     console.log(data)
 //   }).catch(console.log)
 // })
+
+bot.on('sticker', msg => {
+  console.log(msg)
+})
 
 bot.on("new_chat_participant", msg => {
   services.entrar.execute(bot, msg)

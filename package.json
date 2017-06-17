@@ -1,9 +1,10 @@
 {
-  "name": "planos-bot",
+  "name": "ultimate-bot",
   "version": "1.0.0",
-  "description": "Bot for telegram from Planos Assessoria",
+  "description": "Bot for the telegram Group Ultimate Zoeira in Narnia",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,6 +12,7 @@
   "dependencies": {
     "accounting": "^0.4.1",
     "axios": "^0.16.2",
+    "jsdom": "^11.0.0",
     "node-telegram-bot-api": "^0.27.1",
     "promise": "^7.2.0",
     "ramda": "^0.24.1"

@@ -1,11 +1,10 @@
 const entrar = require('./services/entrar')
 const sair = require('./services/sair')
-const empresaOptions = require('./services/empresaOptions')
-const faturamento = require('./services/faturamento')
-const piscofins = require('./services/piscofins')
 const risada = require('./services/risada')
 const stickerHeart = require('./services/stickerHeart')
 const tuamae = require('./services/tuamae')
+const saudacao = require('./services/saudacao')
+const porno = require('./services/porno')
 
 const defs = [
   {
@@ -15,15 +14,27 @@ const defs = [
     eval: false
   },
   {
-    member: "stickerHeart",
+    member: 'stickerHeart',
     regex: /❤️|<3|S2(?:[^\d]+|$)/i,
     fn: (bot, msg) => stickerHeart.execute(bot, msg),
     eval: false
   },
   {
-    member: "tuamae",
-    regex: /bot.*(puto|nazista|gay|burro|idiota|retardado|trou?xa|maconheiro|inútil|fiduma(e|é)gua|z(e|é) r(u|o)ela|ot(á|a)rio|v(i|e)ado)/i,
+    member: 'tuamae',
+    regex: /bot.*(puto|porra|noiado|merda|retardado|lento|doente|doido|maluco|louco|corinthiano|arrombado|gordo|nazista|gay|burro|idiota|retardado|trou?xa|maconheiro|inútil|fiduma(e|é)gua|z(e|é) r(u|o)ela|ot(á|a)rio|v(i|e)ado)|filh(o|a) da puta/i,
     fn: (bot, msg, match) => tuamae.execute(bot, msg, match ? match : []),
+    eval: false
+  },
+  {
+    member: 'saudacao',
+    regex: /b(oa|om) (dia|tarde|noite)/i,
+    fn: (bot, msg, match) => saudacao.execute(bot, msg, match ? match : []),
+    eval: false
+  },
+  {
+    member: 'porno',
+    regex: /bot.*(?:[qual|quais]?)? *(?:[e|é]?)? *(?:[são|sao]?)? *(?:o[s])? *(porn[ô|o|ôs|os]?) *(?:top[er|zera|zêra|s] )? *([^?]+)/i,
+    fn: (bot, msg, match) => porno.execute(bot, msg, match ? match : []),
     eval: false
   }
 ]
@@ -31,10 +42,9 @@ const defs = [
 module.exports = {
   entrar,
   sair,
-  empresaOptions,
-  faturamento,
-  piscofins,
   defs,
   stickerHeart,
-  tuamae
+  tuamae,
+  saudacao,
+  porno
 }

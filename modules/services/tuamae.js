@@ -10,7 +10,8 @@ const answers = [
   'Depois vem me pedir pra fazer as coias ¬¬\'',
   'Oloco, xinga não, jovem :/',
   'Se vira aí então, troxa',
-  'Aff, vou embora então!'
+  'Aff, vou embora então!',
+  'Para de xingar e manda uns pornô'
 ]
 
 const execute = (bot, msg) => {
