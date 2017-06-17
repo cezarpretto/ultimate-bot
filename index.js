@@ -1,5 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api')
-const TOKEN = '448767583:AAG4OALl2BQta0FUHt2cxJQ4S2xY-BKhN10'
+const TOKEN = process.env.ULTIMATE_BOT_TOKEN
 const commands = require('./modules/commands.js')
 const services = require('./modules/services.js')
 const _services = services.defs
