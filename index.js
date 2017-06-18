@@ -45,7 +45,7 @@ bot.on('callback_query', callback => {
 // })
 
 bot.on('sticker', msg => {
-  console.log(msg)
+  // console.log(msg)
 })
 
 bot.on("new_chat_participant", msg => {

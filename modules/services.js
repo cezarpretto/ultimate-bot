@@ -5,6 +5,7 @@ const stickerHeart = require('./services/stickerHeart')
 const tuamae = require('./services/tuamae')
 const saudacao = require('./services/saudacao')
 const porno = require('./services/porno')
+const elogio = require('./services/elogio')
 
 const defs = [
   {
@@ -21,7 +22,7 @@ const defs = [
   },
   {
     member: 'tuamae',
-    regex: /bot.*(puto|fdp|porra|noiado|merda|retardado|lento|doente|doido|maluco|louco|corinthiano|arrombado|gordo|nazista|ptista|gay|burro|idiota|retardado|trou?xa|maconheiro|inútil|fiduma(e|é)gua|z(e|é) r(u|o)ela|ot(á|a)rio|v(i|e)ado)|filh(o|a) da puta/i,
+    regex: /bot.*(puto|fdp|bosta|bostola|animal|desgra(ç|c)ado|c(u|ú)(s|z)(a|ã)o|boludo|porra|noiado|merda|retardado|lento|doente|doido|maluco|louco|corinthiano|arrombado|gordo|nazista|ptista|gay|burro|idiota|retardado|trou?xa|maconheiro|inútil|fiduma(e|é)gua|z(e|é) r(u|o)ela|ot(á|a)rio|v(i|e)ado)|filh(o|a) da puta/i,
     fn: (bot, msg, match) => tuamae.execute(bot, msg, match ? match : []),
     eval: false
   },
@@ -35,6 +36,12 @@ const defs = [
     member: 'porno',
     regex: /bot.*(?:[qual|quais]?)? *(?:[e|é]?)? *(?:[são|sao]?)? *(?:o[s])? *(porn[ô|o|ôs|os]?) *(?:top[er|zera|zêra|s] )? *([^?]+)/i,
     fn: (bot, msg, match) => porno.execute(bot, msg, match ? match : []),
+    eval: false
+  },
+  {
+    member: 'elogio',
+    regex: /bot.*(foda|bonito|fofo|lindo|chique|bacanudo|interessante|bacana|show|fera|bom|estraordin(á|a)rio|excelente|bolado|melhor|fodedor|massa|fod(ã|a)o|best)/i,
+    fn: (bot, msg, match) => elogio.execute(bot, msg, match ? match : []),
     eval: false
   }
 ]
