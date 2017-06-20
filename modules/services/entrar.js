@@ -17,15 +17,11 @@ const stickers = [
 ]
 
 const execute = (bot, msg) => {
-  const reply = {
-    0: bot.sendMessage(msg.chat.id, answers[Math.floor(Math.random() * answers.length)]),
-    1: bot.sendSticker(msg.chat.id, stickers[Math.floor(Math.random() * stickers.length)])
-  }
-
   if(msg.new_chat_member.id === 448767583) {
     bot.sendMessage(msg.chat.id, 'Cheguei nessa porra seus putos. Bora zuar!!!!').catch(console.log)
   }else {
-    reply[Math.floor(Math.random() * 2)]().catch(console.log)
+    bot.sendMessage(msg.chat.id, answers[Math.floor(Math.random() * answers.length)])
+    bot.sendSticker(msg.chat.id, stickers[Math.floor(Math.random() * stickers.length)])
   }
 }
 module.exports = { execute }
