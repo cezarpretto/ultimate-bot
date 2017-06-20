@@ -14,7 +14,8 @@ const answers = [
   'Para de xingar e manda uns pornô',
   'Teu cu viado',
   'Ahhh... Vai dormir seu pedaço de merda!!!',
-  'Você pode até xingar. Mas sua mãe não para de me chamar no privado!!'
+  'Você pode até xingar. Mas sua mãe não para de me chamar no privado!!',
+  'Você está xingando um bot, deveria sentir vergonha de si mesmo...'
 ]
 
 const execute = (bot, msg) => {

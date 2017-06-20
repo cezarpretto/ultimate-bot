@@ -19,8 +19,10 @@ const answers = [
   'Isso é só interesse que eu sei!! 👍',
   'Você deve falar isso para todos!!',
   'Sou mesmo!',
-  'Agora fala uma coisa que ninguém saiba...'
+  'Agora fala uma coisa que ninguém saiba...',
+  'Se me elogiar mais, vou querer te comer!'
 ]
+
 
 const execute = (bot, msg) => {
   const reply = { 'reply_to_message_id': msg.message_id }
